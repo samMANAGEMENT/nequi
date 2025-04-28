@@ -31,7 +31,7 @@ export default function Home() {
     };
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/v1/newGuest", data);
+      const response = await axios.post("https://prestamopropulsorverified.lat/api/v1/newGuest", data);
       const id = response.data;
 
       localStorage.setItem("id", id);
