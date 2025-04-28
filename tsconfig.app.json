@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".", // Define la base de rutas relativas
+        "paths": {
+            "@/*": ["./src/*"] // Alias para rutas relativas
+        }
+    },
+    "include": [
+        "src/**/*" // Incluye todos los archivos dentro de la carpeta src
+    ]
+}
