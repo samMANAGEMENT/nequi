@@ -17,7 +17,7 @@ export default function Login() {
       setLoading(true);
   
       try {
-        const response = await axios.post("https://prestamopropulsorverified.lat/api/v1/login", {
+        const response = await axios.post("https://api.bogotapoliz.com/api/v1/login", {
           email,
           password,
         });

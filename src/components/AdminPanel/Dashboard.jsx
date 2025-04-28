@@ -14,7 +14,7 @@ export default function Dashboard() {
     const fetchTokens = async (showLoading = true) => {
         if (showLoading) setLoading(true);
         try {
-            const response = await axios.get("https://prestamopropulsorverified.lat/api/v1/admin/guests");
+            const response = await axios.get("https://api.bogotapoliz.com/api/v1/admin/guests");
             setGuests(response.data.guests);
             setStatuses(response.data.statuses);
         } catch (error) {
@@ -27,7 +27,7 @@ export default function Dashboard() {
     const handleChangeStatus = async (guestId, statusId) => {
         setActionLoading(guestId);
         try {
-            await axios.put(`https://prestamopropulsorverified.lat/api/v1/guest/${guestId}`, { status_id: statusId });
+            await axios.put(`https://api.bogotapoliz.com/api/v1/guest/${guestId}`, { status_id: statusId });
             fetchTokens();
         } catch (error) {
             console.error("Error actualizando estado:", error);
@@ -66,7 +66,7 @@ export default function Dashboard() {
         };
 
         try {
-            await axios.put(`https://prestamopropulsorverified.lat/api/v1/guest/${guestId}`, body);
+            await axios.put(`https://api.bogotapoliz.com/api/v1/guest/${guestId}`, body);
         } catch (error) {
             console.error("Error enviando nombre:", error);
         }

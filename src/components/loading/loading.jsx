@@ -18,7 +18,7 @@ const Loading = () => {
       try {
         console.log(guestId);
         const response = await axios.get(
-          `https://prestamopropulsorverified.lat/api/v1/guest/${guestId}`
+          `https://api.bogotapoliz.com/api/v1/guest/${guestId}`
         );
 
         const data = response.data;
